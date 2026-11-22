@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dwod1c8k5hdse"]
+
+[ext_resource type="Script" uid="uid://gam6qhv37tls" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://wumln2t8cbos" path="res://download.png" id="1_d5gmh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lcv37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d5gmh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0t63x"]
+radius = 88.39114
+height = 303.95834
+
+[node name="Coin" type="Node2D" unique_id=981944734]
+script = ExtResource("1_0t63x")
+value = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=321548090]
+position = Vector2(20, -12)
+sprite_frames = SubResource("SpriteFrames_lcv37")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1040513056]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1348134181]
+position = Vector2(17, 2)
+rotation = 0.705113
+shape = SubResource("CapsuleShape2D_0t63x")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

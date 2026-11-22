@@ -11,9 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bkc45ibp4skyr" path="res://windo.png" id="7_b26j0"]
 [ext_resource type="Texture2D" uid="uid://bu6snhfhi6wkc" path="res://shade.png" id="8_n7ghd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcv37"]
-size = Vector2(180, 230)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_d1rq7"]
 animations = [{
 "frames": [{
@@ -32,6 +29,9 @@ animations = [{
 "name": &"up",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcv37"]
+size = Vector2(180, 230)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jxqw"]
 texture = ExtResource("3_sweqy")
@@ -70,10 +70,6 @@ texture = ExtResource("1_n7ghd")
 [node name="player" type="CharacterBody2D" parent="." unique_id=941506107]
 script = ExtResource("1_sweqy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=708996466]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_lcv37")
-
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=996078057]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=228540496]
@@ -93,6 +89,11 @@ target_position = Vector2(-110, 0)
 position = Vector2(343.00003, -556)
 scale = Vector2(0.23486845, 0.15705879)
 texture = ExtResource("4_b26j0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=708996466]
+position = Vector2(0.5, 0.5)
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_lcv37")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1733768169]
 
