@@ -34,10 +34,15 @@ func _physics_process(delta: float) -> void:
 
 	# Horizontal movement
 	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction < 0:
+	if velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
-	elif direction > 0:
+	elif velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+		
+	if is_on_floor():
+		$AnimatedSprite2D.animation = "default"
+	else:
+		$AnimatedSprite2D.animation = "up"
 	
 
 
