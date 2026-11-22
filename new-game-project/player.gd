@@ -3,8 +3,8 @@ extends CharacterBody2D
 #region player variables
 
 # nodes
-@onready var RCBottomLeft = $raycasts/walljump/bottomleft
-@onready var RCBottomRight = $raycasts/walljump/bottomright
+@onready var RCBottomLeft = $raycasts/bottomleft
+@onready var RCBottomRight = $raycasts/bottomright
 
 # physics variables
 const RUN_SPEED = 300

@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
-@onready var RCBottomLeft = $raycasts/walljump/bottomleft
-@onready var RCBottomRight = $raycasts/walljump/bottomright
+@onready var RCBottomLeft = $raycasts/bottomleft
+@onready var RCBottomRight = $raycasts/bottomright
 var wallDirection = Vector2.ZERO
 var walljumped = 12923823
 
