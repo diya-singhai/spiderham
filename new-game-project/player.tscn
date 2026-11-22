@@ -70,9 +70,6 @@ texture = ExtResource("1_n7ghd")
 [node name="player" type="CharacterBody2D" parent="." unique_id=941506107]
 script = ExtResource("1_sweqy")
 
-[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=465271148]
-texture = ExtResource("2_hqtel")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=708996466]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_lcv37")
@@ -81,7 +78,6 @@ shape = SubResource("RectangleShape2D_lcv37")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=228540496]
 sprite_frames = SubResource("SpriteFrames_d1rq7")
-animation = &"up"
 
 [node name="raycasts" type="Node" parent="player" unique_id=1331240484]
 
